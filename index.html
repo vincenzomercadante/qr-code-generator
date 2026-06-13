@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta name="description" content="QR Code Generator" />
+    <meta name="keywords" content="HTML, CSS, Javascript, QR" />
+    <meta name="author" content="Vincenzo Mercadante" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/qr-code.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <main id="page-container">
+      <div class="content-container">
+        <h1>QR Code Generator</h1>
+        <div id="qrcode">
+          <img
+            src="./assets/qr-code-placeholder.png"
+            alt="QR code placeholder"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            type="text"
+            name="text-input"
+            id="text-input"
+            placeholder="Type an url or other text input"
+          />
+          <button type="button" id="generator">Generate QR</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <script></script>
+</html>
