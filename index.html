@@ -10,15 +10,16 @@
 
     <title>QR Code Generator</title>
   </head>
+
   <body>
     <main id="page-container">
       <div class="content-container">
         <h1>QR Code Generator</h1>
         <div id="qrcode">
-          <img
+          <!-- <img
             src="./assets/qr-code-placeholder.png"
             alt="QR code placeholder"
-          />
+          /> -->
         </div>
         <div class="input-container">
           <input
@@ -27,11 +28,14 @@
             id="text-input"
             placeholder="Type an url or other text input"
           />
-          <button type="button" id="generator">Generate QR</button>
+          <button type="button" id="generator" onclick="getQrCode()">
+            Generate QR
+          </button>
         </div>
       </div>
     </main>
   </body>
+
   <script>
     const generateButton = document.getElementById("generator");
     const qrcodeContainer = document.getElementById("qrcode");
@@ -43,6 +47,7 @@
         return;
       }
 
+      // empty qr container div
       qrcodeContainer.innerHTML = "";
 
       new QRCode(qrcodeContainer, {
@@ -52,7 +57,5 @@
         color: "white",
       });
     }
-
-    generateButton.addEventListener("click", getQrCode);
   </script>
 </html>
